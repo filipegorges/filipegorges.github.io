@@ -27,7 +27,7 @@ Coveralls | Code coverage insight
 [Official site](https://mochajs.org/) and [Documentation](https://github.com/mochajs/mocha/wiki)
 
 Syntax example:
-```
+```javascript
 describe('componentName', () => {
   context('givenContext', () => {
     it('should meet this expectation...', () => {
@@ -38,7 +38,7 @@ describe('componentName', () => {
 ```
 
 Usage example:
-```
+```javascript
 describe('<FullHeader />', () => {
    it('should have header tag when mount', () => {
         const wrapper = shallow(<FullHeader />);
@@ -58,7 +58,7 @@ describe('<FullHeader />', () => {
 [Official site](http://www.chaijs.com/) and [Documentation](http://www.chaijs.com/api/bdd/)
 
 Syntax example:
-```
+```javascript
 import chai, { expect } from 'chai';
 
 expect(object).to.exist;
@@ -67,7 +67,7 @@ expect(object).to.be.equal('foo');
 ```
 
 Usage example:
-```
+```javascript
 import { expect } from 'chai';
 import converToHumanTime from '../src/ConvertToHumanTime';
 
@@ -98,7 +98,7 @@ describe('ConvertToHumanTime', () => {
 [Official site](http://sinonjs.org/) and [Documentation](http://sinonjs.org/releases/v6.1.4/)
 
 Syntax example:
-```
+```javascript
 import sinon from 'sinon';
 
 let consoleStub;
@@ -109,7 +109,7 @@ consoleStub.restore();
 ```
 
 Usage example:
-```
+```javascript
 import sinon from 'sinon';
 global.fetch = require('node-fetch');
 
@@ -130,7 +130,7 @@ afterEach(() => {
 [Official site](https://github.com/domenic/sinon-chai) and [Documentation](https://github.com/domenic/sinon-chai#assertions)
 
 Syntax example:
-```
+```javascript
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
@@ -143,7 +143,7 @@ expect(mySpy).to.have.been.called;
 ```
 
 Usage example:
-```
+```javascript
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
@@ -195,7 +195,7 @@ describe('Album', () => {
 [Official site](http://airbnb.io/enzyme/) and [Documentation](https://airbnb.io/enzyme/docs/api/)
 
 Syntax example:
-```
+```javascript
 import React from 'react';
 import { shallow } from 'enzyme';
 
@@ -208,7 +208,7 @@ const wrapper = shallow((
 ```
 
 Usage example:
-```
+```javascript
 import React from 'react';
 import { expect } from 'chai';
 import { render } from 'enzyme';
@@ -227,7 +227,7 @@ describe('<Foo />', () => {
 [Official site](https://github.com/producthunt/chai-enzyme) and [Documentation](https://github.com/producthunt/chai-enzyme#assertions)
 
 Syntax example:
-```
+```javascript
 const wrapper = mount(<Fixture />); // mount/render/shallow when applicable
 
 expect(wrapper.find('#checked')).to.be.checked();
@@ -242,7 +242,7 @@ expect(wrapper).to.containMatchingElement(<User name='John' />);
 ```
 
 Usage example:
-```
+```javascript
 import React from 'react';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
@@ -279,7 +279,7 @@ describe('<FullHeader />', () => {
 [Official site](https://github.com/bitinn/node-fetch) and [Documentation](https://github.com/bitinn/node-fetch#api)
 
 Syntax example:
-```
+```javascript
 global.fetch = require('node-fetch');
 
 // plain text or html
@@ -295,7 +295,7 @@ fetch('https://api.github.com/users/github')
 ```
 
 Usage example:
-```
+```javascript
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
@@ -339,7 +339,7 @@ describe('spotify.search.artists', () => {
 [Official site](https://github.com/jsdom/jsdom) and [Documentation](https://github.com/jsdom/jsdom#customizing-jsdom)
 
 Syntax example:
-```
+```javascript
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
@@ -348,7 +348,7 @@ console.log(dom.window.document.querySelector("p").textContent); // "Hello world
 ```
 
 Usage example:
-```
+```javascript
 import 'jsdom-global/register';
 import chai, { expect } from 'chai';
 
@@ -386,7 +386,7 @@ NYC [Official site](https://istanbul.js.org/) and [Documentation](https://istanb
 Coveralls [Official site](https://coveralls.io/) and [Documentation](https://docs.coveralls.io/api-introduction)
 
 Output example:
-```
+```javascript
 -----------|----------|----------|----------|----------|-------------------|
 File       |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
 -----------|----------|----------|----------|----------|-------------------|
@@ -400,7 +400,7 @@ All files  |      100 |      100 |      100 |      100 |                   |
 ```
 
 Usage example:
-```
+```javascript
 ## package.json
 {
   ...
