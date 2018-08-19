@@ -1,11 +1,11 @@
 This post addresses the different lifecycle methods present in React, their order of execution, do's and dont's.
 
 ### Syllabu's:
-**__side effects__**: a side effect [is anything that affects something outside the scope of the function being executed](https://www.reddit.com/r/reactjs/comments/8avfej/what_does_side_effects_mean_in_react/), in React term's, that would be, for example, fetching data, triggering an animation, saving/updating cache, etc.
+**side effects**: a side effect [is anything that affects something outside the scope of the function being executed](https://www.reddit.com/r/reactjs/comments/8avfej/what_does_side_effects_mean_in_react/), in React term's, that would be, for example, fetching data, triggering an animation, saving/updating cache, etc.
 
-**__state__**: a container's property which carries information on the current state of its inner properties.
+**state**: a container's property which carries information on the current state of its inner properties.
 
-**__props__**: props are properties passed down from parent components to children components, they can be either an object or primitve, or a reference to a function.
+**props**: props are properties passed down from parent components to children components, they can be either an object or primitve, or a reference to a function.
 
 ![React's official cheat sheet](https://github.com/filipegorges/filipegorges.github.io/tree/master/assets/images/react-lifecycle-hooks.png)
 
