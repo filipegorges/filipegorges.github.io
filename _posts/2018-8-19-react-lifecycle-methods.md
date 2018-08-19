@@ -7,10 +7,10 @@ This post addresses the different lifecycle methods present in React, their orde
 
 **props**: props are properties passed down from parent components to children components, they can be either an object or primitve, or a reference to a function.
 
-![React's official cheat sheet](https://github.com/filipegorges/filipegorges.github.io/tree/master/assets/images/react-lifecycle-hooks.png)
-
 ## Lifecycle methods
 
+![React's official cheat sheet](/assets/images/react-lifecycle-hooks.png)
+http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
 Method | Do's | Dont's
 --- | --- | ---
@@ -31,3 +31,7 @@ These methods will be deprecated in future versions of React (specifically, afte
 * componentWillReceiveProps()
 * componentWillUpdate()
 
+### Links
+* [Official documentation](https://reactjs.org/docs/react-component.html)
+* [Error boundaries](https://reactjs.org/docs/error-boundaries.html)
+* [React Course (Udemy)](https://www.udemy.com/react-the-complete-guide-incl-redux)
