@@ -67,14 +67,18 @@ A `Route` receives an expression to pattern-match, and a destination; Once the p
 
 **Basic syntax**:
 ```javascript
-// This route will only render 'Posts' if the route path is EXACTLY "/".
+// This route will only render 'Posts' if the route 
+// path is EXACTLY "/".
 <Route path="/" exact component={Posts} />
 
-// This route will render NewPost once it receives a match on "/new-post".
+// This route will render NewPost once it receives 
+// a match on "/new-post".
 <Route path="/new-post" component={NewPost} />
 
-// This route will match anything that has "/" + "anything else", 
-// and will reference "anything else" as "id", within the 'props.match.params' object.
+// This route will match anything that 
+// has "/" + "anything else", and will reference 
+// "anything else" as "id", within 
+// the 'props.match.params' object.
 <Route path="/:id" component={Post} />
 ```
 
