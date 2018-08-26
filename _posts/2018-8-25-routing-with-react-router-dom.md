@@ -6,11 +6,11 @@ npm -i --save react-router-dom
 
 The information written here was taught to me on Maximilian Schwarzmüller's great course [React 16 - The Complete Guide (incl. React Router 4 & Redux)](https://www.udemy.com/react-the-complete-guide-incl-redux/).
 
-## React Router DOM
+# React Router DOM
 
 The way routing works in React Router DOM, is it doesn't render a new page, but instead substitutes the rendered components/containers, conditionally.
 
-## Main concepts
+### Main concepts
 * `BrowserRouter`
 * `Link`
 * `NavLink`
@@ -22,10 +22,8 @@ The way routing works in React Router DOM, is it doesn't render a new page, but 
 * Handling 404's
 * Lazy Loading Routes 
 
-### BrowserRouter 
+## BrowserRouter 
 enables routing behavior on children components.
-
-**Basic syntax**: 
 
 ```javascript
 <BrowserRouter>
@@ -33,12 +31,13 @@ enables routing behavior on children components.
 </BrowserRouter>
 ```
 
-### Link
+## Link
 substitutes anchors for accessing "pages".
 
-**Basic syntax**: 
 
-`<Link to="/some-path">Some Component</Link>`
+```javascript
+<Link to="/some-path">Some Component</Link>
+```
 
 **Supported behaviors**: 
   * `exact`: will only access the component informed to `to={}` if the route is an exact match.
@@ -56,25 +55,24 @@ for (let param of query.entries()) {
 }
 ```
 
-### NavLink
+## NavLink
 substitutes anchors for accessing "pages", and adds styling options. 
 
-**Basic syntax**: 
-
-`<NavLink to="/some-path">Some Component</NavLink>`
+```javascript
+<NavLink to="/some-path">Some Component</NavLink>
+```
 
 **Supported behaviors**: same as `Link`, but supports adding styling attributes to it:
   * `activeClassName`: by default, clicking on a `NavLink` will add a `.active` class to the anchor element. This behavior allows you to substitute that class for a different one.
   * `activeStyle`: allows modification of the current style for the `.active` class.
 
-### Route
+## Route
 A `Route` receives an expression to pattern-match, and a destination; Once the pattern is matched, the destination is called and rendered where the `Route` component was declared. 
 
 **Notes**: 
  * React Router will render every `Route` which `path` matches to the request, therefore if you want to render a single `Route` from a group of `Route`s, consider using `Switch` alongside them.
  * When you have multiple `Route` renders at the same screen, and you have a component that should be re-rendered based on pattern-matching activation, you must implement a `componentDidUpdate()` lifecycle method in order to update it, since **React Router does not unmounts Route rendered components**.
 
-**Basic syntax**:
 ```javascript
 // This route will only render 'Posts' if the route 
 // path is EXACTLY "/".
@@ -97,12 +95,10 @@ A `Route` receives an expression to pattern-match, and a destination; Once the p
   * `component`: receives the imported component as the argument which will be rendered if the pattern-matching evaluates to true.
   * `render`: receives a function to perform an in-line rendering, e.g.: `<Route path="/" render={() => <h1>Home</h1>} />`.
 
-### Switch
+## Switch
 A `Switch` receives children `Route` components, and renders the first, and only the first one, which request matches its route rules.
 
 **Warning**: As stated, `Switch` will only render the first matching `Route`, therefore it is important to be observant of the order which the `Routes` are declared.
-
-**Basic syntax**:
 
 ```javascript
 <Switch>
@@ -112,11 +108,9 @@ A `Switch` receives children `Route` components, and renders the first, and only
 </Switch>
 ```
 
-### Redirect
+## Redirect
 The `Redirect` component changes the navigation **from** a given route path, **to** another route path.
 On this example, if the user tries to access "/", it'll be redirected to whatever matches "/posts" route, triggering React Router to attempt matching routes again:
-
-**Basic syntax**:
 
 ```javascript
 <Route path="/posts" component={Posts} />
@@ -124,7 +118,7 @@ On this example, if the user tries to access "/", it'll be redirected to whateve
 <Redirect from="/" to="/posts" />
 ```
 
-### Programmatic Navigation
+## Programmatic Navigation
 If you want to navigate to a given route, from within a method (say, at the end of some validation, or Promise resolve), you can do it through the `history` object from `props`:
 
 **Basic syntax**:
@@ -138,11 +132,16 @@ itemSelectedHandler = (id) => {
   // Or this syntax:
   this.props.history.push('/' + id);
   
+  // You can also force a redirect
+  // a 'replace' overwrites the last page
+  // on the history stack, so be mindful of it.
+  this.props.history.replace('/some-path');
+  
 }
 
 ```
 
-### Guard
+## Guard
 If you want to conditionally allow/disallow routing to specific components (for example, when working with authentication and authorization), you have two options:
 
 1- You may add conditions to the rendering of `Route` components:
@@ -169,7 +168,7 @@ componentDidMount () {
 }
 ```
 
-### Handling 404's
+## Handling 404's
 To deal with missing pages, add a `Route` that will always match (if using `Switch`, move it to the bottom of the list):
 
 ```javascript
@@ -190,7 +189,7 @@ return (
 
 **Note**: keep in mind that "/" will also always match, so you can't use both these routes at the same `Switch` encapsulation.
 
-### Lazy Loading Routes
+## Lazy Loading Routes
 In order to spare the user from loading all "pages" from your application, you should definetly consider **lazy loading** (or code-splitting): what that means is that the user will only load the pages it navigates to, lowering the footprint and increasing the access speed.
 
 To do so, create a Higher Order Component `asyncComponent`:
