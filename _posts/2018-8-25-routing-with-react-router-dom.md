@@ -47,6 +47,15 @@ substitutes anchors for accessing "pages".
     * `hash`: string containing a fragment, e.g.: `#about`. Good for scrollspies.
     * `search`: string containing query params.
 
+**Tip**: if using `search`, you may want to use this block to collect the query entries:
+
+```javascript
+const query = new URLSearchParams(this.props.location.search);
+for (let param of query.entries()) {
+    console.log(param); // yields ['start', '5']
+}
+```
+
 ### NavLink
 substitutes anchors for accessing "pages", and adds styling options. 
 
