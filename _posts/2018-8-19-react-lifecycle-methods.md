@@ -1,6 +1,6 @@
 This post addresses the different lifecycle methods present in React, their order of execution, do's and dont's.
 
-### Syllabu's:
+### Main concepts
 **side effects**: a side effect [is anything that affects something outside the scope of the function being executed](https://www.reddit.com/r/reactjs/comments/8avfej/what_does_side_effects_mean_in_react/), in React term's, that would be, for example, fetching data, triggering an animation, saving/updating cache, etc.
 
 **state**: a container's property which carries information on the current state of its inner properties.
