@@ -349,6 +349,6 @@ class Results extends Component {
 ```
 
 ### Links
-[Redux Thunk project](https://github.com/reduxjs/redux-thunk)
-[Redux DevTools project](https://github.com/zalmoxisus/redux-devtools-extension)
-[Redux DevTools browser plugin](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+* [Redux Thunk project](https://github.com/reduxjs/redux-thunk)
+* [Redux DevTools project](https://github.com/zalmoxisus/redux-devtools-extension)
+* [Redux DevTools browser plugin](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
