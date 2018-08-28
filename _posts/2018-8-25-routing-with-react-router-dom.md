@@ -1,7 +1,7 @@
 In order to add routing to your React project, the standard is to use the `react-router-dom` package:
 
 ```bash
-npm -i --save react-router-dom
+npm i --save react-router-dom
 ```
 
 The information written here was taught to me on Maximilian Schwarzmüller's great course [React 16 - The Complete Guide (incl. React Router 4 & Redux)](https://www.udemy.com/react-the-complete-guide-incl-redux/).
